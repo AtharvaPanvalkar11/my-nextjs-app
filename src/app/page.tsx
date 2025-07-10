@@ -90,7 +90,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Howl } from "howler";
-import Home2 from "./p2"
+import Home2 from "./p2";
 import { useRouter } from "next/navigation";
 
 type Poem = {
