@@ -91,7 +91,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Howl } from "howler";
 import Home2 from "./p2"
-import { useRouter } from "next/navigation";
 
 type Poem = {
   id: number;
@@ -101,13 +100,7 @@ type Poem = {
   createdAt: string;
 };
 
-
 export default function Home() {
-  const router = useRouter();
-
-  const goToPoemList = () => {
-    router.push("/poem-list");
-  };
   const [poems, setPoems] = useState<Poem[]>([]);
   const [form, setForm] = useState({ title: "", content: "", author: "" });
   const [index, setIndex] = useState(-1);
@@ -160,15 +153,6 @@ export default function Home() {
     >
       <Home2></Home2>
       <center>
-        <button
-          onClick={goToPoemList}
-          className="bg-purple-500 text-white font-bold px-6 py-2 rounded shadow hover:bg-purple-600 transition"
-        >
-          Click this 😘
-        </button>
-      </center>
-
-      {/* <center>
         <h1 className="text-2xl text-black font-bold mb-4">Post a Poem</h1>
       </center>
 
@@ -196,8 +180,7 @@ export default function Home() {
         onClick={handleSubmit}
       >
         Submit
-      </button> */}
-
+      </button>
       {/* 
       <h2 className="text-xl font-semibold mt-10 mb-4">Your Poem Book</h2> */}
 
