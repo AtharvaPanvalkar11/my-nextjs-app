@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Howl } from "howler";
 
+
 type Poem = {
   id: number;
   title: string;
@@ -12,6 +13,7 @@ type Poem = {
   author: string;
   createdAt: string;
 };
+
 
 export default function Home2() {
   const [poems, setPoems] = useState<Poem[]>([]);
